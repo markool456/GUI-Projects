@@ -24,25 +24,44 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="questionTextField1" layoutX="188.0" layoutY="171.0" prefHeight="25.0" prefWidth="232.0" promptText="Answer here" />
+                  <TextField fx:id="question1TextField" layoutX="188.0" layoutY="171.0" prefHeight="25.0" prefWidth="232.0" promptText="Answer here" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="panel2" prefHeight="191.0" prefWidth="600.0">
                <children>
-                  <Label layoutX="206.0" layoutY="140.0" prefHeight="21.0" prefWidth="189.0" text="Who the fuck is giganigga">
+                  <Label layoutX="206.0" layoutY="140.0" prefHeight="21.0" prefWidth="189.0" text="What is the capital of Japan?">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="questionTextField" layoutX="188.0" layoutY="171.0" prefHeight="25.0" prefWidth="232.0" promptText="Answer here" />
+                  <TextField fx:id="question2TextField" layoutX="188.0" layoutY="171.0" prefHeight="25.0" prefWidth="232.0" promptText="Answer here" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="panel3" prefHeight="390.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="206.0" layoutY="140.0" prefHeight="21.0" prefWidth="189.0" text="What is the capital of Germany?">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="question3TextField" layoutX="188.0" layoutY="171.0" prefHeight="25.0" prefWidth="232.0" promptText="Answer here" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="panel4" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="154.0" layoutY="82.0" prefHeight="21.0" prefWidth="293.0" text="Congratulations! You have finished the quiz">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </children>
       </StackPane>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Button fx:id="nextButton" layoutX="421.0" layoutY="2.0" mnemonicParsing="false" onAction="#goToPanel2" text="Next" />
-            <Button fx:id="prevButton" layoutX="143.0" layoutY="2.0" mnemonicParsing="false" onAction="#goToPanel2" text="Prev" />
+            <Button fx:id="nextButton" layoutX="421.0" layoutY="2.0" mnemonicParsing="false" onAction="#nextPanel" text="Next" />
+            <Button fx:id="prevButton" layoutX="143.0" layoutY="2.0" mnemonicParsing="false" onAction="#prevPanel" text="Prev" />
             <Button fx:id="backToMenuButton" layoutX="287.0" layoutY="53.0" mnemonicParsing="false" onAction="#switchToMainMenu" text="Back" />
          </children>
       </AnchorPane>

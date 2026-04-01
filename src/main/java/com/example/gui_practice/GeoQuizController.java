@@ -7,6 +7,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -17,25 +19,48 @@ public class GeoQuizController {
     private Scene scene;
     private Parent root;
     private AnchorPane[] panels;
+    private TextField[] guess;
+    private int score, currentIndex = 0;
+    private String[] answers = new String[]{"Paris", "Tokyo", "Berlin"};
     @FXML
-    public AnchorPane panel1, panel2;
+    public Label scoreLabel;
     @FXML
-    public Button prevButton;
+    public AnchorPane panel1, panel2, panel3, panel4;
+    @FXML
+    public Button prevButton, nextButton, backToMenuButton;
+    @FXML
+    public TextField question1TextField, question2TextField, question3TextField;
     @FXML
     public void initialize(){
-        panels = new AnchorPane[]{panel1, panel2};
-
-        for(int i = 0; i < panels.length; i++){
-            panels[i].setVisible(i == 0);
-        }
+        panels = new AnchorPane[]{panel1, panel2, panel3, panel4};
+        guess = new TextField[]{question1TextField, question2TextField, question3TextField};
+        updatePanels();
 
         prevButton.setVisible(false);
     }
+    @FXML
+    public void nextPanel(){
+        if(currentIndex < panels.length - 1){
+            currentIndex++;
+            updatePanels();
+        }
+    }
 
     @FXML
-    public void goToPanel2() {
-        panel2.setVisible(true);
-        panel1.setVisible(false);
+    public void prevPanel(){
+        if(currentIndex > 0){
+            currentIndex--;
+            updatePanels();
+        }
+    }
+
+
+    public void updatePanels(){
+        for(int i = 0; i < panels.length; i++){
+            panels[i].setVisible(i == currentIndex);
+        }
+        prevButton.setVisible(currentIndex > 0);
+        nextButton.setVisible(currentIndex < panels.length - 1);
     }
 
 
