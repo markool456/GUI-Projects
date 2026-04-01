@@ -20,8 +20,9 @@ public class GeoQuizController {
     private Parent root;
     private AnchorPane[] panels;
     private TextField[] guess;
-    private int score, currentIndex = 0;
+    private int score = 0, currentIndex = 0;
     private String[] answers = new String[]{"Paris", "Tokyo", "Berlin"};
+    private boolean[] answered = new boolean[]{false, false, false};
     @FXML
     public Label scoreLabel;
     @FXML
@@ -34,12 +35,16 @@ public class GeoQuizController {
     public void initialize(){
         panels = new AnchorPane[]{panel1, panel2, panel3, panel4};
         guess = new TextField[]{question1TextField, question2TextField, question3TextField};
+        setScore();
         updatePanels();
+
 
         prevButton.setVisible(false);
     }
     @FXML
     public void nextPanel(){
+        checkAnswer();
+
         if(currentIndex < panels.length - 1){
             currentIndex++;
             updatePanels();
@@ -52,6 +57,28 @@ public class GeoQuizController {
             currentIndex--;
             updatePanels();
         }
+    }
+
+    @FXML
+    public void checkAnswer(){
+        if(currentIndex >= answers.length || answered[currentIndex])
+            return;
+
+        String userAnswer = guess[currentIndex].getText().trim();
+        String correctAnswer = answers[currentIndex];
+
+        if(userAnswer.equalsIgnoreCase(correctAnswer)){
+            score++;
+            setScore();
+        }
+
+        answered[currentIndex] = true;
+    }
+
+    public void setScore(){
+        if(score > 3)
+            return;
+        scoreLabel.setText("Your Score: " + score + "/3");
     }
 
 

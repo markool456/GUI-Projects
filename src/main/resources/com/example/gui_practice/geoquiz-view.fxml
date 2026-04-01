@@ -12,19 +12,19 @@
    <children>
       <AnchorPane prefHeight="95.0" prefWidth="615.0">
          <children>
-            <Label fx:id="scoreLabel" layoutX="86.0" layoutY="57.0" text="Score : 0/3" />
+            <Label fx:id="scoreLabel" layoutX="86.0" layoutY="57.0" />
          </children>
       </AnchorPane>
       <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="307.0" prefWidth="600.0">
          <children>
             <AnchorPane fx:id="panel1" prefHeight="333.0" prefWidth="615.0">
                <children>
-                  <Label layoutX="206.0" layoutY="140.0" prefHeight="21.0" prefWidth="189.0" text="What is the capital of France">
+                  <Label layoutX="206.0" layoutY="140.0" prefHeight="21.0" prefWidth="197.0" text="What is the capital of France?">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="question1TextField" layoutX="188.0" layoutY="171.0" prefHeight="25.0" prefWidth="232.0" promptText="Answer here" />
+                  <TextField fx:id="question1TextField" layoutX="188.0" layoutY="171.0" onAction="#checkAnswer" prefHeight="25.0" prefWidth="232.0" promptText="Answer here" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="panel2" prefHeight="191.0" prefWidth="600.0">
@@ -34,17 +34,17 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="question2TextField" layoutX="188.0" layoutY="171.0" prefHeight="25.0" prefWidth="232.0" promptText="Answer here" />
+                  <TextField fx:id="question2TextField" layoutX="188.0" layoutY="171.0" onAction="#checkAnswer" prefHeight="25.0" prefWidth="232.0" promptText="Answer here" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="panel3" prefHeight="390.0" prefWidth="600.0">
                <children>
-                  <Label layoutX="206.0" layoutY="140.0" prefHeight="21.0" prefWidth="189.0" text="What is the capital of Germany?">
+                  <Label layoutX="196.0" layoutY="140.0" prefHeight="21.0" prefWidth="217.0" text="What is the capital of Germany?">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="question3TextField" layoutX="188.0" layoutY="171.0" prefHeight="25.0" prefWidth="232.0" promptText="Answer here" />
+                  <TextField fx:id="question3TextField" layoutX="188.0" layoutY="171.0" onAction="#checkAnswer" prefHeight="25.0" prefWidth="232.0" promptText="Answer here" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="panel4" prefHeight="200.0" prefWidth="200.0">
