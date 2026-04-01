@@ -9,61 +9,61 @@
 <?import javafx.scene.text.Font?>
 
 <VBox prefHeight="479.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui_practice.GeoQuizController">
-   <children>
-      <AnchorPane prefHeight="95.0" prefWidth="615.0">
-         <children>
-            <Label fx:id="scoreLabel" layoutX="86.0" layoutY="57.0" />
-         </children>
-      </AnchorPane>
-      <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="307.0" prefWidth="600.0">
-         <children>
-            <AnchorPane fx:id="panel1" prefHeight="333.0" prefWidth="615.0">
-               <children>
-                  <Label layoutX="206.0" layoutY="140.0" prefHeight="21.0" prefWidth="197.0" text="What is the capital of France?">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="question1TextField" layoutX="188.0" layoutY="171.0" onAction="#checkAnswer" prefHeight="25.0" prefWidth="232.0" promptText="Answer here" />
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="panel2" prefHeight="191.0" prefWidth="600.0">
-               <children>
-                  <Label layoutX="206.0" layoutY="140.0" prefHeight="21.0" prefWidth="189.0" text="What is the capital of Japan?">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="question2TextField" layoutX="188.0" layoutY="171.0" onAction="#checkAnswer" prefHeight="25.0" prefWidth="232.0" promptText="Answer here" />
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="panel3" prefHeight="390.0" prefWidth="600.0">
-               <children>
-                  <Label layoutX="196.0" layoutY="140.0" prefHeight="21.0" prefWidth="217.0" text="What is the capital of Germany?">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="question3TextField" layoutX="188.0" layoutY="171.0" onAction="#checkAnswer" prefHeight="25.0" prefWidth="232.0" promptText="Answer here" />
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="panel4" prefHeight="200.0" prefWidth="200.0">
-               <children>
-                  <Label layoutX="154.0" layoutY="82.0" prefHeight="21.0" prefWidth="293.0" text="Congratulations! You have finished the quiz">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </children>
-      </StackPane>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0">
-         <children>
-            <Button fx:id="nextButton" layoutX="421.0" layoutY="2.0" mnemonicParsing="false" onAction="#nextPanel" text="Next" />
-            <Button fx:id="prevButton" layoutX="143.0" layoutY="2.0" mnemonicParsing="false" onAction="#prevPanel" text="Prev" />
-            <Button fx:id="backToMenuButton" layoutX="287.0" layoutY="53.0" mnemonicParsing="false" onAction="#switchToMainMenu" text="Back" />
-         </children>
-      </AnchorPane>
-   </children>
+    <children>
+        <AnchorPane prefHeight="95.0" prefWidth="615.0">
+            <children>
+                <Label fx:id="scoreLabel" layoutX="86.0" layoutY="57.0" />
+            </children>
+        </AnchorPane>
+        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="307.0" prefWidth="600.0">
+            <children>
+                <AnchorPane fx:id="panel1" prefHeight="333.0" prefWidth="615.0">
+                    <children>
+                        <Label layoutX="206.0" layoutY="140.0" prefHeight="21.0" prefWidth="197.0" text="What is the capital of France?">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="question1TextField" layoutX="188.0" layoutY="171.0" onAction="#checkAnswer" prefHeight="25.0" prefWidth="232.0" promptText="Answer here" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="panel2" prefHeight="191.0" prefWidth="600.0">
+                    <children>
+                        <Label layoutX="206.0" layoutY="140.0" prefHeight="21.0" prefWidth="189.0" text="What is the capital of Japan?">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="question2TextField" layoutX="188.0" layoutY="171.0" onAction="#checkAnswer" prefHeight="25.0" prefWidth="232.0" promptText="Answer here" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="panel3" prefHeight="390.0" prefWidth="600.0">
+                    <children>
+                        <Label layoutX="196.0" layoutY="140.0" prefHeight="21.0" prefWidth="217.0" text="What is the capital of Germany?">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="question3TextField" layoutX="188.0" layoutY="171.0" onAction="#checkAnswer" prefHeight="25.0" prefWidth="232.0" promptText="Answer here" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="panel4" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="154.0" layoutY="82.0" prefHeight="21.0" prefWidth="293.0" text="Congratulations! You have finished the quiz">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </StackPane>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Button fx:id="nextButton" layoutX="421.0" layoutY="2.0" mnemonicParsing="false" onAction="#nextPanel" text="Next" />
+                <Button fx:id="prevButton" layoutX="143.0" layoutY="2.0" mnemonicParsing="false" onAction="#prevPanel" text="Prev" />
+                <Button fx:id="backToMenuButton" layoutX="287.0" layoutY="53.0" mnemonicParsing="false" onAction="#switchToMainMenu" text="Back" />
+            </children>
+        </AnchorPane>
+    </children>
 </VBox>
